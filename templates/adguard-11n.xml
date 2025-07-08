@@ -9,7 +9,7 @@
   <Project>https://github.com/11notes/docker-adguard</Project>
   <Overview>Custom Docker build of AdGuard Home by 11notes. Blocks ads and trackers network-wide with an easy-to-use interface.</Overview>
   <Category>Network:DNS</Category>
-  <WebUI>http://[IP]:[PORT:3081]</WebUI>
+  <WebUI>http://[IP]:[PORT:3080]</WebUI>
   <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/RobertCajun/unraid-templates/main/icons/adguard-11n-icon.png</Icon>
 
@@ -20,6 +20,6 @@
   <!-- Port Mappings -->
   <Config Name="DNS Port (TCP)" Target="53" Default="53" Mode="tcp" Description="DNS service TCP port" Type="Port" Display="always" Required="true" Mask="false"/>
   <Config Name="DNS Port (UDP)" Target="53" Default="53" Mode="udp" Description="DNS service UDP port" Type="Port" Display="always" Required="true" Mask="false"/>
-  <Config Name="Web UI Port 1" Target="3000" Default="3081" Mode="tcp" Description="Primary Web UI (setup/config page)" Type="Port" Display="always" Required="true" Mask="false"/>
-  <Config Name="Web UI Port 2" Target="80" Default="3080" Mode="tcp" Description="Alternate Web UI (port 80 inside container)" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="Web UI for Setup" Target="3000" Default="3081" Mode="tcp" Description="Primary Web UI (setup/config page)" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="Web UI for Dashbaord" Target="80" Default="3080" Mode="tcp" Description="Alternate Web UI (port 80 inside container)" Type="Port" Display="always" Required="false" Mask="false"/>
 </Container>
