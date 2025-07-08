@@ -11,7 +11,7 @@
   <Category>Network:DNS</Category>
   <WebUI>http://[IP]:[PORT:3081]</WebUI>
   <TemplateURL/>
-  <Icon>https://raw.githubusercontent.com/AdguardTeam/AdGuardHome/master/assets/adguard-icon.png</Icon>
+  <Icon>https://raw.githubusercontent.com/RobertCajun/unraid-templates/main/icons/adguard-11n-icon.png</Icon>
 
   <!-- Volume Mappings -->
   <Config Name="Config Directory" Target="/adguard/etc" Default="/mnt/user/appdata/adguard-11n/etc" Mode="rw" Description="Configuration files for AdGuard Home" Type="Path" Display="always" Required="true" Mask="false"/>
