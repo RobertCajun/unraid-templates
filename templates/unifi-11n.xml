@@ -16,7 +16,7 @@
   https://help.ui.com/hc/en-us/articles/218506997-Required-Ports-Reference
   </Overview>
   <Category>Network:Management</Category>
-  <WebUI>http://[IP]:[PORT:8443]</WebUI>
+  <WebUI>https://[IP]:[PORT:8443]</WebUI>
   <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/RobertCajun/unraid-templates/main/icons/unifi-11n-icon.png</Icon>
 
