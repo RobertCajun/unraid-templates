@@ -10,7 +10,11 @@
   <Project>https://github.com/11notes/docker-unifi</Project>
   <Overview>Custom Docker build of Unifi Controller by 11notes.
   
-  Port 8443 for Dashboard</Overview>
+  Port 8443 for Dashboard
+
+  Will add more ports to the Template when I get time but heres the list for all the required ports.
+  https://help.ui.com/hc/en-us/articles/218506997-Required-Ports-Reference
+  </Overview>
   <Category>Network:Management</Category>
   <WebUI>http://[IP]:[PORT:8443]</WebUI>
   <TemplateURL/>
