@@ -11,7 +11,7 @@
   <Overview>Custom Docker build of Unifi Controller by 11notes.
   
   Port 8443 for Dashboard</Overview>
-  <Category>Network:DNS</Category>
+  <Category>Network:Management</Category>
   <WebUI>http://[IP]:[PORT:8443]</WebUI>
   <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/RobertCajun/unraid-templates/main/icons/unifi-11n-icon.png</Icon>
