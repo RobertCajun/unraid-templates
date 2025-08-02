@@ -1,1 +1,27 @@
 
+<Container>
+  <Name>Unifi-11notes</Name>
+  <Repository>11notes/unifi:9.3.45-unraid</Repository>
+  <Registry>https://github.com/11notes/docker-unifi</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/11notes/docker-unifi/issues</Support>
+  <Project>https://github.com/11notes/docker-unifi</Project>
+  <Overview>Custom Docker build of Unifi Controller by 11notes.
+  
+  Port 8443 for Dashboard</Overview>
+  <Category>Network:DNS</Category>
+  <WebUI>http://[IP]:[PORT:8443]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/RobertCajun/unraid-templates/main/icons/unifi-11n-icon.png</Icon>
+
+  <!-- Volume Mappings -->
+  <Config Name="VAR Directory" Target="/var" Default="/mnt/user/appdata/unifi-11n/var" Mode="rw" Description="VAR folder" Type="Path" Display="always" Required="true" Mask="false"/>
+
+  <!-- Port Mappings -->
+  <Config Name="Dashboard (TCP)" Target="8443" Default="8443" Mode="tcp" Description="Dashboard TCP port" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="STUN Port (UDP)" Target="3478" Default="3478" Mode="udp" Description="STUN UDP port" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="Communication Port" Target="8080" Default="8080" Mode="tcp" Description="Used for device and application communication." Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="Web UI for Dashbaord" Target="80" Default="3080" Mode="tcp" Description="Dashboard Web UI (port 80 inside container)" Type="Port" Display="always" Required="false" Mask="false"/>
+</Container>
