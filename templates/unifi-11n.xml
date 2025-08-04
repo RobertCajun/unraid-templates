@@ -25,10 +25,10 @@
 
   <!-- Port Mappings -->
   <Config Name="Dashboard (TCP)" Target="8443" Default="8443" Mode="tcp" Description="Dashboard TCP port" Type="Port" Display="always" Required="true" Mask="false"/>
-  <Config Name="STUN Port (UDP)" Target="3478" Default="3478" Mode="udp" Description="STUN UDP port" Type="Port" Display="always" Required="true" Mask="false"/>
-  <Config Name="Communication Port" Target="8080" Default="8080" Mode="tcp" Description="Used for device and application communication." Type="Port" Display="always" Required="true" Mask="false"/>
-  <Config Name="L2 Discovery Port" Target="1900" Default="1900" Mode="udp" Description="Used with Make application discoverable on L2 network in the UniFi Network settings." Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="L2 Discovery Port (UDP)" Target="1900" Default="1900" Mode="udp" Description="Used with Make application discoverable on L2 network in the UniFi Network settings." Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="STUN Port (UDP)" Target="3478" Default="3478" Mode="udp" Description="STUN UDP port" Type="Port" Display="always" Required="true" Mask="false"/>  
   <Config Name="Unifi Speed Test (TCP)" Target="6789" Default="6789" Mode="tcp" Description="User for Mobile Speed Test" Type="Port" Display="always" Required="true" Mask="false"/>   <Config Name="STUN Port (UDP)" Target="3478" Default="3478" Mode="udp" Description="STUN UDP port" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="Communication Port (TCP)" Target="8080" Default="8080" Mode="tcp" Description="Used for device and application communication." Type="Port" Display="always" Required="true" Mask="false"/>
   <Config Name="Device Adoption (UDP)" Target="10001" Default="10001" Mode="udp" Description="Device discovery during adoption port" Type="Port" Display="always" Required="true" Mask="false"/>
 
 </Container>
