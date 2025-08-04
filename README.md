@@ -4,4 +4,4 @@ Unraid Templates
 
 Adguard: Working
 
-Unifi: Hasnt been Tested Yet
+Unifi: Working from my setup, will try once the repo updates.
