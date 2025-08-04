@@ -21,7 +21,7 @@
   <Icon>https://raw.githubusercontent.com/RobertCajun/unraid-templates/main/icons/unifi-11n-icon.png</Icon>
 
   <!-- Volume Mappings -->
-  <Config Name="VAR Directory" Target="/var" Default="/mnt/user/appdata/unifi-11n/var" Mode="rw" Description="VAR folder" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="VAR Directory" Target="/unifi/var" Default="/mnt/user/appdata/unifi-11n/var" Mode="rw" Description="VAR folder" Type="Path" Display="always" Required="true" Mask="false"/>
 
   <!-- Port Mappings -->
   <Config Name="Dashboard (TCP)" Target="8443" Default="8443" Mode="tcp" Description="Dashboard TCP port" Type="Port" Display="always" Required="true" Mask="false"/>
