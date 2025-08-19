@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>radarr-11notes</Name>
+  <Repository>11notes/radarr:5.26.2</Repository>
+  <Registry>https://hub.docker.com/r/11notes/radarr</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+
+  <Support>https://github.com/11notes/docker-radarr</Support>
+  <Project>https://github.com/11notes/docker-radarr</Project>
+  <Overview>Lightweight Radarr container with read-only image and tmpfs /tmp requirement.</Overview>
+  <Category>Downloaders:</Category>
+  <WebUI>http://[IP]:[PORT:7878]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/11notes/docker-radarr/master/radarr.png</Icon>
+  <ExtraParams>--read-only --tmpfs /tmp:uid=1000,gid=1000 --security-opt no-new-privileges=true</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you find this useful, consider supporting the developer on GitHub.</DonateText>
+  <DonateLink>https://github.com/sponsors/11notes</DonateLink>
+  <Requires>Configure your appdata path below.</Requires>
+
+  <!-- Ports -->
+  <Config Name="WebUI Port" Target="7878" Default="7878" Mode="tcp" Description="Radarr WebUI" Type="Port" Display="always" Required="true" Mask="false">7878</Config>
+
+  <!-- Paths -->
+  <Config Name="Config Directory" Target="/radarr/etc" Default="/mnt/user/appdata/radarr11n/etc" Mode="rw" Description="Configuration files" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/radarr11n/etc</Config>
+  <Config Name="Data Directory" Target="/data" Default="/mnt/user/data" Mode="rw" Description="Unraid data directory" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/data</Config>
+
+  <!-- Environment Variables -->
+  <Config Name="Timezone" Target="TZ" Default="UTC" Mode="" Description="Container timezone" Type="Variable" Display="always" Required="false" Mask="false">America/Toronto</Config>
+</Container>
