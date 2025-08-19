@@ -1,42 +1,32 @@
 <Container>
   <Name>qbittorrent</Name>
   <Repository>11notes/qbittorrent:5.1.2</Repository>
-  <Registry>https://hub.docker.com/r/11notes/qbittorrent</Registry>
+  <Registry>docker.io</Registry>
   <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/11notes/docker-qbittorrent</Support>
-  <Project>https://github.com/11notes/docker-qbittorrent</Project>
-  <Overview>This container runs qBittorrent in a read-only container with persistent configuration and data folders.</Overview>
-  <Category>Downloaders:BitTorrent</Category>
-  <WebUI>http://[IP]:[PORT:3000]</WebUI>
-  <Icon></Icon>
-  <ExtraParams>--read-only</ExtraParams>
-  <RestartPolicy>always</RestartPolicy>
 
+  <Support>https://github.com/11notes/docker-qbittorrent</Support>
+
+  <Project>qbittorrent</Project>
+  <Overview>qBittorrent Docker container</Overview>
+  <Description>qBittorrent with lockdown options</Description>
+
+  <UI>stable</UI>
+
+  <!-- Environment Variables -->
   <Environment>
-    <Variable>
+    <TZ>
       <Name>TZ</Name>
       <Value>Europe/Zurich</Value>
-      <Mode>text</Mode>
-    </Variable>
+    </TZ>
   </Environment>
 
-  <Data>
-    <Volume>
-      <HostDir>/mnt/user/appdata/qbittorrent11n/etc</HostDir>
-      <ContainerDir>/qbittorrent/etc</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/mnt/user/appdata/qbittorrent11n/var</HostDir>
-      <ContainerDir>/qbittorrent/var</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
-
+  <!-- Host Ports to Container Ports -->
   <Port>
     <HostPort>3000</HostPort>
-    <ContainerPort>3000</ContainerPort>
+    <ContainerPort>8080</ContainerPort>
     <Protocol>tcp</Protocol>
   </Port>
   <Port>
@@ -49,4 +39,22 @@
     <ContainerPort>6881</ContainerPort>
     <Protocol>udp</Protocol>
   </Port>
+
+  <!-- Volume Mappings -->
+  <Volume>
+    <HostPath>/mnt/user/appdata/qbittorrent11n/etc</HostPath>
+    <ContainerPath>/qbittorrent/etc</ContainerPath>
+    <Mode>rw</Mode>
+  </Volume>
+  <Volume>
+    <HostPath>/mnt/user/appdata/qbittorrent11n/var</HostPath>
+    <ContainerPath>/qbittorrent/var</ContainerPath>
+    <Mode>rw</Mode>
+  </Volume>
+
+  <!-- Additional Docker Options (lockdown) -->
+  <ExtraParameters>--read-only --security-opt no-new-privileges=true</ExtraParameters>
+
+  <PostArgs/>
+  <WebUI>http://[IP]:3000</WebUI>
 </Container>
