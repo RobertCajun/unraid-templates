@@ -14,7 +14,7 @@
   <Category>Downloaders:</Category>
   <WebUI>http://[IP]:[PORT:7878]</WebUI>
   <TemplateURL/>
-  <Icon>https://raw.githubusercontent.com/11notes/docker-radarr/master/radarr.png</Icon>
+  <Icon>https://github.com/RobertCajun/unraid-templates/icons/radarr-11notes.png</Icon>
   <ExtraParams>--read-only --tmpfs /tmp:uid=1000,gid=1000 --security-opt no-new-privileges=true</ExtraParams>
   <PostArgs/>
   <CPUset/>
