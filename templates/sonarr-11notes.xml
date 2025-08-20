@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>sonarr-11notes</Name>
+  <Repository>11notes/sonarr:4.0.15</Repository>
+  <Registry>https://hub.docker.com/r/11notes/sonarr</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+
+  <Support>https://github.com/11notes/docker-sonarr</Support>
+  <Project>https://github.com/11notes/docker-sonarr</Project>
+  <Overview>Lightweight Sonarr container with read-only image and tmpfs /tmp requirement.</Overview>
+  <Category>Downloaders:</Category>
+  <WebUI>http://[IP]:[PORT:8989]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/11notes/docker-sonarr/master/sonarr.png</Icon>
+  <ExtraParams>--read-only --tmpfs /tmp:uid=1000,gid=1000 --security-opt no-new-privileges=true</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you find this useful, consider supporting the developer on GitHub.</DonateText>
+  <DonateLink>https://github.com/sponsors/11notes</DonateLink>
+  <Requires>Configure your appdata path below.</Requires>
+
+  <!-- Ports -->
+  <Config Name="WebUI Port" Target="8989" Default="8989" Mode="tcp" Description="Sonarr WebUI" Type="Port" Display="always" Required="true" Mask="false">8989</Config>
+
+  <!-- Paths -->
+  <Config Name="Config Directory" Target="/sonarr/etc" Default="/mnt/user/appdata/sonarr11n/etc" Mode="rw" Description="Configuration files" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/sonarr11n/etc</Config>
+  <Config Name="Data Directory" Target="/data" Default="/mnt/user/data" Mode="rw" Description="Unraid data directory" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/data</Config>
+
+  <!-- Environment Variables -->
+  <Config Name="Timezone" Target="TZ" Default="UTC" Mode="" Description="Container timezone" Type="Variable" Display="always" Required="false" Mask="false">America/Toronto</Config>
+</Container>
