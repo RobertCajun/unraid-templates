@@ -14,7 +14,7 @@
   <Category>Downloaders:</Category>
   <WebUI>http://[IP]:[PORT:8989]</WebUI>
   <TemplateURL/>
-  <Icon>https://raw.githubusercontent.com/11notes/docker-sonarr/master/sonarr.png</Icon>
+  <Icon>https://github.com/RobertCajun/unraid-templates/blob/2eaa4d56ad08da6e447509ee4f975646ffc66190/icons/sonarr-11notes.png</Icon>
   <ExtraParams>--read-only --tmpfs /tmp:uid=1000,gid=1000 --security-opt no-new-privileges=true</ExtraParams>
   <PostArgs/>
   <CPUset/>
